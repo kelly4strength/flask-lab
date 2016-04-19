@@ -1,3 +1,4 @@
+
 from random import choice
 
 from flask import Flask, request
@@ -16,8 +17,9 @@ AWESOMENESS = [
 def start_here():
     """Home page."""
 
-    return "Hi! This is the home page."
-
+    return """<!doctype html><html><a href="http://localhost:5000/hello">
+    <body>Hi! This is the home page.</body>
+    </a></html>"""
 
 @app.route('/hello')
 def say_hello():
